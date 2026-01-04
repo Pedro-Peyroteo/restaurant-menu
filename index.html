@@ -27,13 +27,20 @@
 
     <style>
       :root {
-        --accent: #d97706; /* warm amber */
+        --accent: #d97706;
       }
       html {
         scroll-behavior: smooth;
       }
       body {
         font-family: "Inter", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
       [x-cloak] {
         display: none !important;
@@ -49,11 +56,11 @@
       class="max-w-md mx-auto px-4 py-6 bg-neutral-50 rounded-2xl shadow-sm"
     >
       <!-- Header -->
-      <header class="mb-10 flex justify-center">
+      <header class="mb-12 flex justify-center">
         <img
           src="./logo.png"
-          alt="Restaurant logo"
-          class="h-24 w-auto mx-auto"
+          alt="Porta 25 logo"
+          class="h-28 sm:h-32 w-auto mx-auto opacity-95"
         />
       </header>
 
@@ -70,7 +77,7 @@
       <!-- Submenu (anchors) -->
       <nav
         x-show="!loading && !error"
-        class="sticky top-0 z-10 bg-neutral-50/90 backdrop-blur py-3 mb-6 overflow-x-auto"
+        class="sticky top-0 z-10 bg-neutral-50/90 backdrop-blur py-3 mb-6 overflow-x-auto no-scrollbar"
       >
         <ul class="flex gap-3 text-sm">
           <template x-for="category in categories" :key="category.id">
@@ -122,7 +129,7 @@
         </template>
       </div>
 
-      <footer class="mt-12 text-center text-xs text-neutral-400">
+      <footer class="p-10 text-center text-xs text-neutral-400">
         Prices include VAT • Ask staff for allergens
       </footer>
     </main>

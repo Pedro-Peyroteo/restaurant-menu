@@ -29,8 +29,8 @@ function menuData() {
           });
         },
         {
-          rootMargin: "-40% 0px -55% 0px",
-          threshold: 0,
+          rootMargin: "-35% 0px -40% 0px",
+          threshold: 0.1,
         }
       );
 
