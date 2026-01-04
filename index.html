@@ -106,22 +106,32 @@
             </h2>
 
             <template x-for="item in category.items" :key="item.name">
-              <div class="py-4 border-b border-neutral-200 last:border-b-0">
+              <div
+                class="py-4 border-b border-neutral-200 last:border-b-0"
+                :class="item.available === false ? 'opacity-50' : ''"
+              >
                 <div class="flex justify-between gap-4 items-start">
                   <div class="max-w-[75%]">
-                    <h3 class="font-medium leading-snug text-neutral-900">
-                      <span x-text="item.name"></span>
-                    </h3>
+                    <h3
+                      class="font-medium leading-snug"
+                      :class="item.available === false ? 'line-through text-neutral-500' : 'text-neutral-900'"
+                      x-text="item.name"
+                    ></h3>
+
                     <p
-                      class="text-sm text-neutral-500 leading-snug mt-0.5"
+                      class="text-sm leading-snug mt-0.5"
+                      :class="item.available === false ? 'text-neutral-400' : 'text-neutral-500'"
                       x-text="item.description"
                     ></p>
                   </div>
-                  <span
-                    class="font-semibold whitespace-nowrap text-neutral-800"
-                  >
-                    €<span x-text="item.price"></span>
-                  </span>
+
+                  <template x-if="item.available !== false">
+                    <span
+                      class="font-semibold whitespace-nowrap text-neutral-800"
+                    >
+                      €<span x-text="item.price"></span>
+                    </span>
+                  </template>
                 </div>
               </div>
             </template>

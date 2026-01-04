@@ -7,32 +7,38 @@
         {
           "name": "Classic Burger",
           "description": "Beef patty, cheese, lettuce, tomato",
-          "price": "8.50"
+          "price": "8.50",
+          "available": true
         },
         {
           "name": "Chicken Burger",
           "description": "Crispy chicken, mayo, pickles",
-          "price": "7.90"
+          "price": "7.90",
+          "available": true
         },
         {
           "name": "Double Cheeseburger",
           "description": "Two beef patties, double cheese, onion",
-          "price": "10.50"
+          "price": "10.50",
+          "available": false
         },
         {
           "name": "Bacon Burger",
           "description": "Beef patty, bacon, cheddar, BBQ sauce",
-          "price": "9.80"
+          "price": "9.80",
+          "available": true
         },
         {
           "name": "Veggie Burger",
           "description": "Grilled vegetable patty, lettuce, tomato",
-          "price": "8.20"
+          "price": "8.20",
+          "available": true
         },
         {
           "name": "Spicy Burger",
           "description": "Beef patty, jalapeños, spicy mayo",
-          "price": "9.20"
+          "price": "9.20",
+          "available": false
         }
       ]
     },
@@ -43,22 +49,26 @@
         {
           "name": "French Fries",
           "description": "Golden and crispy",
-          "price": "2.50"
+          "price": "2.50",
+          "available": true
         },
         {
           "name": "Sweet Potato Fries",
           "description": "Served with house sauce",
-          "price": "3.50"
+          "price": "3.50",
+          "available": true
         },
         {
           "name": "Onion Rings",
           "description": "Crispy battered onion rings",
-          "price": "3.00"
+          "price": "3.00",
+          "available": false
         },
         {
           "name": "Side Salad",
           "description": "Mixed greens with vinaigrette",
-          "price": "2.80"
+          "price": "2.80",
+          "available": true
         }
       ]
     },
@@ -69,27 +79,32 @@
         {
           "name": "Water",
           "description": "Still or sparkling",
-          "price": "1.20"
+          "price": "1.20",
+          "available": true
         },
         {
           "name": "Soft Drink",
           "description": "Cola, Orange, Lemon",
-          "price": "1.80"
+          "price": "1.80",
+          "available": true
         },
         {
           "name": "Iced Tea",
           "description": "Homemade lemon iced tea",
-          "price": "2.00"
+          "price": "2.00",
+          "available": true
         },
         {
           "name": "Beer",
           "description": "Local draft beer",
-          "price": "2.50"
+          "price": "2.50",
+          "available": false
         },
         {
           "name": "House Wine",
           "description": "Red or white",
-          "price": "2.80"
+          "price": "2.80",
+          "available": true
         }
       ]
     },
@@ -100,17 +115,20 @@
         {
           "name": "Chocolate Cake",
           "description": "Rich chocolate cake with ganache",
-          "price": "3.50"
+          "price": "3.50",
+          "available": true
         },
         {
           "name": "Cheesecake",
           "description": "Classic baked cheesecake",
-          "price": "3.80"
+          "price": "3.80",
+          "available": false
         },
         {
           "name": "Ice Cream",
           "description": "Vanilla, chocolate, or strawberry",
-          "price": "2.50"
+          "price": "2.50",
+          "available": true
         }
       ]
     }
