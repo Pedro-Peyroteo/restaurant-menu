@@ -8,14 +8,14 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- App -->
+    <script src="menu.js"></script>
+
     <!-- Alpine -->
     <script
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-
-    <!-- App -->
-    <script defer src="menu.js"></script>
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,25 +26,42 @@
     />
 
     <style>
+      :root {
+        --accent: #d97706;
+      }
       html {
         scroll-behavior: smooth;
       }
       body {
         font-family: "Inter", sans-serif;
       }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      [x-cloak] {
+        display: none !important;
+      }
     </style>
   </head>
 
-  <body class="bg-neutral-50 text-neutral-900">
+  <body class="bg-neutral-100 text-neutral-900">
     <main
       x-data="menuData()"
       x-init="init()"
-      class="max-w-md mx-auto px-4 py-6"
+      x-cloak
+      class="max-w-md mx-auto px-4 py-6 bg-neutral-50 rounded-2xl shadow-sm"
     >
       <!-- Header -->
-      <header class="mb-6 text-center">
-        <h1 class="text-2xl font-semibold">🍽️ Menu</h1>
-        <p class="text-sm text-neutral-500 mt-1">Scroll to explore</p>
+      <header class="mb-8 flex justify-center pb-6 border-b border-neutral-200">
+        <img
+          src="./assets/logo.png"
+          alt="Porta 25 logo"
+          class="h-40 sm:h-32 w-auto mx-auto opacity-95"
+        />
       </header>
 
       <!-- Loading -->
@@ -58,13 +75,18 @@
       </div>
 
       <!-- Submenu (anchors) -->
-      <nav x-show="!loading && !error" class="mb-6 overflow-x-auto">
+      <nav
+        x-show="!loading && !error"
+        class="sticky top-0 z-10 bg-neutral-50/90 backdrop-blur py-3 mb-6 overflow-x-auto no-scrollbar"
+      >
         <ul class="flex gap-3 text-sm">
           <template x-for="category in categories" :key="category.id">
             <li>
               <a
                 :href="'#' + category.id"
-                class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-700 whitespace-nowrap"
+                :class="activeCategory === category.id
+                        ? 'px-4 py-1.5 rounded-full bg-[#d97706]/90 ring-1 ring-[#d97706]/40 text-neutral-50 text-sm font-semibold whitespace-nowrap transition-all duration-200 ease-out'
+                        : 'px-4 py-1.5 rounded-full bg-neutral-200/60 text-neutral-700 text-sm font-medium whitespace-nowrap hover:bg-neutral-300/60 transition-all duration-200 ease-out'"
               >
                 <span x-text="category.name"></span>
               </a>
@@ -77,21 +99,50 @@
       <div x-show="!loading && !error">
         <template x-for="category in categories" :key="category.id">
           <section :id="category.id" class="mb-8 scroll-mt-24">
-            <h2 class="text-lg font-semibold mb-3" x-text="category.name"></h2>
+            <h2 class="text-lg font-semibold mt-10 mb-4 tracking-tight">
+              <span class="border-l-4 border-[color:var(--accent)] pl-2">
+                <span x-text="category.name"></span>
+              </span>
+            </h2>
 
             <template x-for="item in category.items" :key="item.name">
-              <div class="py-3 border-b border-neutral-200 last:border-b-0">
-                <div class="flex justify-between gap-4">
-                  <div>
-                    <h3 class="font-medium" x-text="item.name"></h3>
+              <div
+                class="py-4 border-b border-neutral-200 last:border-b-0"
+                :class="item.available === false ? 'opacity-50' : ''"
+              >
+                <div class="flex justify-between gap-4 items-start">
+                  <div class="max-w-[75%]">
+                    <h3
+                      class="font-medium leading-snug flex items-center gap-1"
+                      :class="item.available === false
+                            ? 'line-through text-neutral-500'
+                            : 'text-neutral-900'"
+                    >
+                      <span x-text="item.name"></span>
+
+                      <template x-if="item.spicy">
+                        <span class="text-sm" title="Spicy">🌶️</span>
+                      </template>
+
+                      <template x-if="item.vegetarian">
+                        <span class="text-sm" title="Vegetarian">🥦</span>
+                      </template>
+                    </h3>
+
                     <p
-                      class="text-sm text-neutral-500"
+                      class="text-sm leading-snug mt-0.5"
+                      :class="item.available === false ? 'text-neutral-400' : 'text-neutral-500'"
                       x-text="item.description"
                     ></p>
                   </div>
-                  <span class="font-medium whitespace-nowrap">
-                    €<span x-text="item.price"></span>
-                  </span>
+
+                  <template x-if="item.available !== false">
+                    <span
+                      class="font-semibold whitespace-nowrap text-neutral-800"
+                    >
+                      €<span x-text="item.price"></span>
+                    </span>
+                  </template>
                 </div>
               </div>
             </template>
@@ -99,7 +150,7 @@
         </template>
       </div>
 
-      <footer class="mt-10 text-center text-xs text-neutral-400">
+      <footer class="p-10 text-center text-xs text-neutral-400">
         Prices include VAT • Ask staff for allergens
       </footer>
     </main>
