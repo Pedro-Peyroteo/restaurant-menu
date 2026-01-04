@@ -32,6 +32,9 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      [x-cloak] {
+        display: none !important;
+      }
     </style>
   </head>
 
@@ -39,6 +42,7 @@
     <main
       x-data="menuData()"
       x-init="init()"
+      x-cloak
       class="max-w-md mx-auto px-4 py-6"
     >
       <!-- Header -->
@@ -58,7 +62,10 @@
       </div>
 
       <!-- Submenu (anchors) -->
-      <nav x-show="!loading && !error" class="mb-6 overflow-x-auto">
+      <nav
+        x-show="!loading && !error"
+        class="sticky top-0 z-10 bg-neutral-50 py-2 mb-6 overflow-x-auto"
+      >
         <ul class="flex gap-3 text-sm">
           <template x-for="category in categories" :key="category.id">
             <li>
@@ -77,21 +84,25 @@
       <div x-show="!loading && !error">
         <template x-for="category in categories" :key="category.id">
           <section :id="category.id" class="mb-8 scroll-mt-24">
-            <h2 class="text-lg font-semibold mb-3" x-text="category.name"></h2>
+            <h2
+              class="text-lg font-semibold mt-8 mb-4"
+              x-text="category.name"
+            ></h2>
 
             <template x-for="item in category.items" :key="item.name">
               <div class="py-3 border-b border-neutral-200 last:border-b-0">
                 <div class="flex justify-between gap-4">
-                  <div>
-                    <h3 class="font-medium" x-text="item.name"></h3>
+                    <div class="max-w-[75%]">
+                    <h3 class="font-medium leading-snug" x-text="item.name"></h3>
                     <p
-                      class="text-sm text-neutral-500"
-                      x-text="item.description"
+                        class="text-sm text-neutral-500 leading-snug"
+                        x-text="item.description"
                     ></p>
-                  </div>
-                  <span class="font-medium whitespace-nowrap">
+                    </div>
+                    <span class="font-medium whitespace-nowrap text-neutral-800">
                     €<span x-text="item.price"></span>
-                  </span>
+                    </span>
+                </div>
                 </div>
               </div>
             </template>
