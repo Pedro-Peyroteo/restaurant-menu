@@ -15,6 +15,7 @@ function menuData() {
       } finally {
         this.loading = false;
       }
+      console.log("DATA: ", this.categories);
     },
   };
 }
