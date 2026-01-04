@@ -113,10 +113,21 @@
                 <div class="flex justify-between gap-4 items-start">
                   <div class="max-w-[75%]">
                     <h3
-                      class="font-medium leading-snug"
-                      :class="item.available === false ? 'line-through text-neutral-500' : 'text-neutral-900'"
-                      x-text="item.name"
-                    ></h3>
+                      class="font-medium leading-snug flex items-center gap-1"
+                      :class="item.available === false
+                            ? 'line-through text-neutral-500'
+                            : 'text-neutral-900'"
+                    >
+                      <span x-text="item.name"></span>
+
+                      <template x-if="item.spicy">
+                        <span class="text-sm" title="Spicy">🌶️</span>
+                      </template>
+
+                      <template x-if="item.vegetarian">
+                        <span class="text-sm" title="Vegetarian">🥦</span>
+                      </template>
+                    </h3>
 
                     <p
                       class="text-sm leading-snug mt-0.5"
