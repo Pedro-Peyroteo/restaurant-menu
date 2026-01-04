@@ -74,7 +74,9 @@
             <li>
               <a
                 :href="'#' + category.id"
-                class="px-4 py-1.5 rounded-full bg-neutral-200/60 text-neutral-700 text-sm font-medium whitespace-nowrap hover:bg-neutral-300/60 transition"
+                :class="activeCategory === category.id
+                        ? 'px-4 py-1.5 rounded-full bg-neutral-900 text-white text-sm font-medium whitespace-nowrap transition'
+                        : 'px-4 py-1.5 rounded-full bg-neutral-200/60 text-neutral-700 text-sm font-medium whitespace-nowrap hover:bg-neutral-300/60 transition'"
               >
                 <span x-text="category.name"></span>
               </a>
