@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- App -->
+    <script defer src="menu.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-neutral-50 text-neutral-900">
+    <main
+      x-data="menuData()"
+      x-init="init()"
+      class="max-w-md mx-auto px-4 py-6"
+    >
+      <!-- Header -->
+      <header class="mb-6 text-center">
+        <h1 class="text-2xl font-semibold">🍽️ Menu</h1>
+        <p class="text-sm text-neutral-500 mt-1">Scroll to explore</p>
+      </header>
+
+      <!-- Loading -->
+      <div x-show="loading" class="text-center text-neutral-500 py-8">
+        Loading menu…
+      </div>
+
+      <!-- Error -->
+      <div x-show="error" class="text-center text-red-500 py-8">
+        Failed to load menu
+      </div>
+
+      <!-- Submenu (anchors) -->
+      <nav x-show="!loading && !error" class="mb-6 overflow-x-auto">
+        <ul class="flex gap-3 text-sm">
+          <template x-for="category in categories" :key="category.id">
+            <li>
+              <a
+                :href="'#' + category.id"
+                class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-700 whitespace-nowrap"
+              >
+                <span x-text="category.name"></span>
+              </a>
+            </li>
+          </template>
+        </ul>
+      </nav>
+
+      <!-- Menu -->
+      <div x-show="!loading && !error">
+        <template x-for="category in categories" :key="category.id">
+          <section :id="category.id" class="mb-8 scroll-mt-24">
+            <h2 class="text-lg font-semibold mb-3" x-text="category.name"></h2>
+
+            <template x-for="item in category.items" :key="item.name">
+              <div class="py-3 border-b border-neutral-200 last:border-b-0">
+                <div class="flex justify-between gap-4">
+                  <div>
+                    <h3 class="font-medium" x-text="item.name"></h3>
+                    <p
+                      class="text-sm text-neutral-500"
+                      x-text="item.description"
+                    ></p>
+                  </div>
+                  <span class="font-medium whitespace-nowrap">
+                    €<span x-text="item.price"></span>
+                  </span>
+                </div>
+              </div>
+            </template>
+          </section>
+        </template>
+      </div>
+
+      <footer class="mt-10 text-center text-xs text-neutral-400">
+        Prices include VAT • Ask staff for allergens
+      </footer>
+    </main>
+  </body>
+</html>

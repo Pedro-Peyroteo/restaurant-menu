@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "items": [
+        {
+          "name": "Classic Burger",
+          "description": "Beef patty, cheese, lettuce, tomato",
+          "price": "8.50"
+        },
+        {
+          "name": "Chicken Burger",
+          "description": "Crispy chicken, mayo, pickles",
+          "price": "7.90"
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "items": [
+        {
+          "name": "French Fries",
+          "description": "Golden and crispy",
+          "price": "2.50"
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Water",
+          "description": "Still or sparkling",
+          "price": "1.20"
+        }
+      ]
+    }
+  ]
+}
