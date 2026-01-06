@@ -84,9 +84,11 @@
             <li>
               <a
                 :href="'#' + category.id"
-                :class="activeCategory === category.id
-                        ? 'px-4 py-1.5 rounded-full bg-[#d97706]/90 ring-1 ring-[#d97706]/40 text-neutral-50 text-sm font-semibold whitespace-nowrap transition-all duration-200 ease-out'
-                        : 'px-4 py-1.5 rounded-full bg-neutral-200/60 text-neutral-700 text-sm font-medium whitespace-nowrap hover:bg-neutral-300/60 transition-all duration-200 ease-out'"
+                :data-pill="category.id"
+                :class="activeCategoryId === category.id
+                        ? 'bg-[#d97706] text-white'
+                        : 'bg-neutral-100 text-neutral-700'"
+                class="px-4 py-2 rounded-full whitespace-nowrap transition-colors"
               >
                 <span x-text="category.name"></span>
               </a>
