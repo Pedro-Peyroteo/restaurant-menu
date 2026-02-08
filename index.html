@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -109,6 +109,7 @@
 
             <template x-for="item in category.items" :key="item.name">
               <div
+                x-show="!item.hidden"
                 class="py-4 border-b border-neutral-200 last:border-b-0"
                 :class="item.available === false ? 'opacity-50' : ''"
               >
@@ -121,6 +122,12 @@
                             : 'text-neutral-900'"
                     >
                       <span x-text="item.name"></span>
+                      <template x-if="item.qtd">
+                        <span
+                          class="text-xs text-neutral-500 font-normal"
+                          x-text="'(' + item.qtd + ' Unidades)'"
+                        ></span>
+                      </template>
 
                       <template x-if="item.spicy">
                         <span class="text-sm" title="Spicy">🌶️</span>

@@ -4,24 +4,37 @@
       "id": "petiscos",
       "name": "Petiscos",
       "items": [
-        { "name": "Argolas de Calamares", "price": "4.00" },
-        { "name": "Bolinhas de Alheira", "price": "4.00" },
-        { "name": "Batata da Porta", "price": "5.00" },
+        {
+          "name": "Argolas de Calamares",
+          "price": "4.00",
+          "qtd": 8
+        },
+        { "name": "Bolinhas de Alheira", "price": "4.00", "qtd": 6 },
+        {
+          "name": "Batata da Porta",
+          "description": "Batata frita, queijo, bacon, ovo e molho de francesinha",
+          "price": "6.00"
+        },
+        {
+          "name": "Batata Cheddar",
+          "description": "Batata frita, bacon, cebola frita e creme de queijo cheddar",
+          "price": "6.00"
+        },
+        {
+          "name": "Fingers de Mozzarella",
+          "description": "Palitos de queijo mozzarella panados",
+          "qtd": 6,
+          "price": "4.00"
+        },
         { "name": "Rissol Leitão Grande", "price": "1.90" },
         { "name": "Bolo de Bacalhau Grande", "price": "1.50" },
         { "name": "Chamuça", "price": "1.30" },
-        {
-          "name": "Empalhada",
-          "description": "Tremoços, azeitonas e amendoins",
-          "price": "2.00",
-          "vegetarian": true
-        },
         {
           "name": "Ovos Rotos",
           "description": "Batata frita, queijo, cebola frita, presunto e ovo frito",
           "price": "5.00"
         },
-        { "name": "Asinhas de Frango", "price": "4.50" },
+        { "name": "Asinhas de Frango", "price": "4.50", "qtd": 6 },
         {
           "name": "Batata Frita",
           "price": "2.00",
@@ -37,12 +50,33 @@
         {
           "name": "Francesinha",
           "description": "Bife de vaca, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
-          "price": "11.50"
+          "price": "12.50"
         },
         {
           "name": "Francesinha de Frango",
           "description": "Hambúrguer de frango crocante, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
           "price": "11.50"
+        },
+        {
+          "name": "Francesinha de Alheira",
+          "description": "Alheira, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "price": "11.50"
+        },
+        {
+          "name": "Francesinha de Hambúrguer",
+          "description": "Hambúrguer, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "hidden": true,
+          "price": "14.00"
+        },
+        {
+          "name": "Tuguinha",
+          "description": "Pão rústico, linguiça, chouriça, queijo, presunto, fiambre, molho e batata frita",
+          "price": "14.00"
+        },
+        {
+          "name": "Cachorro",
+          "description": "Pão, fiambre, queijo, salsicha fumada, batata palha, ketchup, maionese e mostarda",
+          "price": "4.80"
         },
         {
           "name": "Cachorro Molhado",
@@ -66,12 +100,12 @@
         },
         {
           "name": "Hambúrguer 25",
-          "description": "Carne de vaca, queijo flamengo, cheddar, fiambre, bacon, salsicha fumada, ovo, maionese d’alho, tomate e alface",
+          "description": "Carne de vaca, queijo flamengo, cheddar, fiambre, bacon, salsicha fumada, ovo, maionese d’alho, tomate, alface e cebola crocante",
           "price": "7.50"
         },
         {
           "name": "Hambúrguer Sem Nome",
-          "description": "Carne de vaca, linguiça fumada, maionese sweet chili, queijo flamengo, cebola, alface e batata palha",
+          "description": "Carne de vaca, carne de porco fumada, maionese sweet chili, queijo flamengo, cebola, alface e batata palha",
           "price": "7.00"
         },
         {
@@ -81,13 +115,13 @@
         },
         {
           "name": "Hambúrguer El Cabrón",
-          "description": "Carne de vaca, queijo flamengo, carne picada picante, molho picante e Doritos Chili",
+          "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante e Doritos Chili",
           "price": "8.50",
           "spicy": true
         },
         {
           "name": "Hambúrguer El Diablo",
-          "description": "Carne de vaca, queijo flamengo, carne picada picante, ketchup picante, Doritos Chili e milho",
+          "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante, ketchup picante, Doritos Chili e milho (mais picante)",
           "price": "8.50",
           "spicy": true
         },
@@ -98,7 +132,7 @@
         },
         {
           "name": "Hambúrguer O Farrusco",
-          "description": "Pão preto, molho barbecue, carne de vaca, queijo flamengo, cheddar, bacon, cebola crocante e alface",
+          "description": "Pão preto, molho barbecue, carne de vaca, ovo, queijo flamengo, cheddar, bacon, cebola crocante e alface",
           "price": "7.50"
         }
       ]
@@ -110,7 +144,7 @@
       "items": [
         {
           "name": "Francesinha Vegetariana",
-          "description": "Legumes, cogumelos, bechamel, queijo e batata frita",
+          "description": "Pão de forma, alheira vegetariana, queijo, ovo e batata frita",
           "price": "11.50",
           "vegetarian": true
         },
@@ -141,96 +175,52 @@
         {
           "name": "Batata da Porta Vegetariana",
           "description": "Batata frita, queijo, alheira vegetariana, ovo e molho",
-          "price": "5.00",
+          "price": "6.00",
           "vegetarian": true
         }
       ]
     },
+
     {
       "id": "cervejas",
       "name": "Cervejas",
       "items": [
         { "name": "Lambreta", "price": "0.90" },
         { "name": "Fino Mahou 20 cl", "price": "1.20" },
-        { "name": "Príncipe Mahou 33 cl", "price": "1.80" },
-        { "name": "Caneca Mahou 50 cl", "price": "2.20" },
+        { "name": "Príncipe Mahou 33 cl", "price": "1.90" },
+        { "name": "Caneca Mahou 50 cl", "price": "2.50" },
         { "name": "Sangria à Pressão Mahou 20 cl", "price": "1.50" },
         { "name": "Sangria à Pressão Mahou 33 cl", "price": "2.00" },
         { "name": "Sangria à Pressão Mahou 50 cl", "price": "2.50" },
-        { "name": "Cerveja com Martini 20 cl", "price": "1.50" },
-        { "name": "Cerveja com Favaios 20 cl", "price": "1.50" },
+        { "name": "Cerveja com Martini 20 cl", "price": "1.90" },
+        { "name": "Cerveja com Favaios 20 cl", "price": "1.80" },
         { "name": "Panaché 20 cl", "price": "1.20" },
         { "name": "Tango 20 cl", "price": "1.20" },
-        { "name": "Mahou Preta 0,33 cl", "price": "1.40" }
+        { "name": "Mahou Preta 0,33 cl", "price": "1.50" }
       ]
     },
+
     {
-      "id": "cervejas-artesanais",
-      "name": "Cervejas Artesanais",
+      "id": "cafes",
+      "name": "Cafés",
       "items": [
-        {
-          "name": "Lavradeira",
-          "description": "Dubbel 7%",
-          "price": "2.90"
-        },
-        {
-          "name": "Natália",
-          "description": "Quadrupel 11%",
-          "price": "3.30"
-        },
-        {
-          "name": "Varina",
-          "description": "Stout 6.2%",
-          "price": "2.90"
-        },
-        {
-          "name": "Ceifeira",
-          "description": "Trigo 5.5%",
-          "price": "2.90"
-        },
-        {
-          "name": "Tricana",
-          "description": "Bohemian Pilsner 6%",
-          "price": "2.90"
-        },
-        {
-          "name": "Salineira",
-          "description": "IPA 6.2%",
-          "price": "2.90"
-        },
-        {
-          "name": "Coelhinha",
-          "description": "Abadia 9%",
-          "price": "3.30"
-        },
-        {
-          "name": "Serrana",
-          "description": "Fumada 6%",
-          "price": "3.30"
-        }
+        { "name": "Café Expresso", "price": "0.90" },
+        { "name": "Descafeinado", "price": "0.90" },
+        { "name": "Café Duplo", "price": "1.80" },
+        { "name": "Carioca de Café", "price": "0.70" },
+        { "name": "Meia de Leite", "price": "1.20" },
+        { "name": "Galão", "price": "1.30" },
+        { "name": "Abatanado", "price": "1.20" },
+        { "name": "Pingo / Garoto", "price": "0.70" },
+        { "name": "Cevada", "price": "0.65" },
+        { "name": "Carioca de Limão", "price": "0.65" },
+        { "name": "Copo de Leite", "price": "0.85" },
+        { "name": "Cappuccino", "price": "1.00" },
+        { "name": "Chocolate Quente", "price": "1.50" },
+        { "name": "Chá", "price": "1.00" }
       ]
     },
-    {
-      "id": "bebidas",
-      "name": "Bebidas",
-      "items": [
-        { "name": "Coca-Cola", "price": "1.50" },
-        { "name": "Iced Tea", "price": "1.50" },
-        { "name": "B!", "price": "1.50" },
-        { "name": "Ginger Ale", "price": "1.50" },
-        { "name": "Schweppes", "price": "1.50" },
-        { "name": "Schweppes Citrus", "price": "1.50" },
-        { "name": "Somersby", "price": "2.50" },
-        { "name": "Água das Pedras 25 cl", "price": "1.20" },
-        { "name": "Água das Pedras com Sabores 25 cl", "price": "1.20" },
-        { "name": "Sumol", "price": "1.50" },
-        { "name": "7up", "price": "1.50" },
-        { "name": "Guaraná", "price": "1.50" },
-        { "name": "Compal", "price": "1.50" },
-        { "name": "Água s/ Gás 0,50 cl", "price": "0.90" },
-        { "name": "Água s/ Gás 1,50 cl", "price": "1.30" }
-      ]
-    },
+
     {
       "id": "vinhos",
       "name": "Vinhos",
@@ -241,25 +231,23 @@
         { "name": "Vinho Tinto Arcos do Convento", "price": "4.90" },
         { "name": "Vinho Branco Borba", "price": "5.90" },
         { "name": "Vinho Alto do Pina (Tinto / Branco)", "price": "8.50" },
-        { "name": "Vinho Tinto São Brás Reserva", "price": "8.50" },
-        { "name": "Espumante Fita Azul", "price": "9.00" },
-        { "name": "Espumante Terras do Demo", "price": "14.00" }
+        { "name": "Vinho Tinto São Brás Reserva", "price": "8.50" }
       ]
     },
+
     {
       "id": "espirituosas",
       "name": "Bebidas Espirituosas",
       "items": [
-        { "name": "Martini Tónico", "price": "2.50" },
         { "name": "Gin Tónico", "price": "6.00" },
-        { "name": "Martini", "price": "1.20" },
+        { "name": "Martini", "price": "1.50" },
         { "name": "Croft", "price": "2.00" },
-        { "name": "Limoncello", "price": "1.00" },
+        { "name": "Limoncello", "price": "1.50" },
         { "name": "Licor Beirão", "price": "3.00" },
         { "name": "Baileys Cream", "price": "3.00" },
         { "name": "Negrita Rum", "price": "3.00" },
         { "name": "Macieira Cream", "price": "3.00" },
-        { "name": "Vinho do Porto", "price": "1.20" },
+        { "name": "Vinho do Porto 5 cl", "price": "1.30" },
         { "name": "Licor de Café", "price": "2.00" },
         { "name": "Whisky", "price": "4.00" },
         { "name": "Rum 5 cl", "price": "4.00" },
@@ -267,27 +255,26 @@
         { "name": "Cuba Libre", "price": "4.00" },
         { "name": "Caipirinha", "price": "4.00" },
         { "name": "Caipiblack", "price": "4.00" },
-        { "name": "Caipirão", "price": "4.00" },
         { "name": "Mojito", "price": "4.00" }
       ]
     },
+
     {
-      "id": "cafes",
-      "name": "Cafés",
+      "id": "cervejas-artesanais",
+      "name": "Cervejas Artesanais",
       "items": [
-        { "name": "Café Expresso", "price": "0.80" },
-        { "name": "Descafeinado", "price": "0.80" },
-        { "name": "Café Duplo", "price": "1.40" },
-        { "name": "Carioca de Café", "price": "0.70" },
-        { "name": "Meia de Leite", "price": "1.10" },
-        { "name": "Galão", "price": "1.20" },
-        { "name": "Abatanado", "price": "0.90" },
-        { "name": "Pingo / Garoto", "price": "0.70" },
-        { "name": "Cevada", "price": "0.65" },
-        { "name": "Carioca de Limão", "price": "0.65" },
-        { "name": "Copo de Leite", "price": "0.85" },
-        { "name": "Capuccino", "price": "1.00" },
-        { "name": "Chocolate Quente", "price": "1.30" }
+        { "name": "Lavradeira", "description": "Dubbel 7%", "price": "2.90" },
+        { "name": "Natália", "description": "Quadrupel 11%", "price": "3.30" },
+        { "name": "Varina", "description": "Stout 6.2%", "price": "2.90" },
+        { "name": "Ceifeira", "description": "Trigo 5.5%", "price": "2.90" },
+        {
+          "name": "Tricana",
+          "description": "Bohemian Pilsner 6%",
+          "price": "2.90"
+        },
+        { "name": "Salineira", "description": "IPA 6.2%", "price": "2.90" },
+        { "name": "Coelhinha", "description": "Abadia 9%", "price": "3.30" },
+        { "name": "Serrana", "description": "Fumada 6%", "price": "3.30" }
       ]
     }
   ]
