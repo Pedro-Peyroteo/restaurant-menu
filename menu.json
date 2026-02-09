@@ -9,11 +9,11 @@
           "price": "4.00",
           "qtd": 8
         },
-        { "name": "Bolinhas de Alheira", "price": "4.00", "qtd": 6 },
+        { "name": "Bolinhas de Alheira", "price": "4.50", "qtd": 6 },
         {
           "name": "Batata da Porta",
           "description": "Batata frita, queijo, bacon, ovo e molho de francesinha",
-          "price": "6.00"
+          "price": "6.50"
         },
         {
           "name": "Batata Cheddar",
@@ -101,39 +101,34 @@
         {
           "name": "Hambúrguer 25",
           "description": "Carne de vaca, queijo flamengo, cheddar, fiambre, bacon, salsicha fumada, ovo, maionese d’alho, tomate, alface e cebola crocante",
-          "price": "7.50"
+          "price": "8.00"
         },
         {
           "name": "Hambúrguer Sem Nome",
-          "description": "Carne de vaca, carne de porco fumada, maionese sweet chili, queijo flamengo, cebola, alface e batata palha",
+          "description": "Carne de vaca, salsicha fumada, maionese, sweet chili, queijo flamengo, cebola, alface e batata palha",
           "price": "7.00"
         },
         {
           "name": "Hambúrguer de Alheira",
           "description": "Alheira frita, maionese de alho, queijo flamengo, ovo, alface e tomate",
-          "price": "6.50"
+          "price": "7.00"
         },
         {
           "name": "Hambúrguer El Cabrón",
           "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante e Doritos Chili",
-          "price": "8.50",
+          "price": "9.00",
           "spicy": true
         },
         {
           "name": "Hambúrguer El Diablo",
           "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante, ketchup picante, Doritos Chili e milho (mais picante)",
-          "price": "8.50",
+          "price": "9.50",
           "spicy": true
-        },
-        {
-          "name": "Hambúrguer O Idiota",
-          "description": "Carne de vaca, molho cocktail, queijo flamengo, chouriço, cebola e alface",
-          "price": "7.00"
         },
         {
           "name": "Hambúrguer O Farrusco",
           "description": "Pão preto, molho barbecue, carne de vaca, ovo, queijo flamengo, cheddar, bacon, cebola crocante e alface",
-          "price": "7.50"
+          "price": "8.00"
         }
       ]
     },
@@ -157,7 +152,7 @@
         {
           "name": "Hambúrguer de Alheira Vegetariana",
           "description": "Alheira vegetariana, maionese, tomate, queijo flamengo e alface",
-          "price": "6.50",
+          "price": "7.00",
           "vegetarian": true
         },
         {
@@ -169,7 +164,7 @@
         {
           "name": "Alheira Vegetariana no Prato",
           "description": "Batata frita e alface",
-          "price": "6.50",
+          "price": "7.00",
           "vegetarian": true
         },
         {
@@ -226,7 +221,6 @@
       "name": "Vinhos",
       "items": [
         { "name": "Vinho ao Copo (Tinto ou Branco)", "price": "1.20" },
-        { "name": "Vassadios Branco", "price": "6.00" },
         { "name": "Vinho Verde Vermelhisco", "price": "4.90" },
         { "name": "Vinho Tinto Arcos do Convento", "price": "4.90" },
         { "name": "Vinho Branco Borba", "price": "5.90" },
