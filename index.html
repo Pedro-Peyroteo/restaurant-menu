@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -84,9 +84,11 @@
             <li>
               <a
                 :href="'#' + category.id"
-                :class="activeCategory === category.id
-                        ? 'px-4 py-1.5 rounded-full bg-[#d97706]/90 ring-1 ring-[#d97706]/40 text-neutral-50 text-sm font-semibold whitespace-nowrap transition-all duration-200 ease-out'
-                        : 'px-4 py-1.5 rounded-full bg-neutral-200/60 text-neutral-700 text-sm font-medium whitespace-nowrap hover:bg-neutral-300/60 transition-all duration-200 ease-out'"
+                :data-pill="category.id"
+                :class="activeCategoryId === category.id
+                        ? 'bg-[#d97706] text-white'
+                        : 'bg-neutral-100 text-neutral-700'"
+                class="px-4 py-2 rounded-full whitespace-nowrap transition-colors"
               >
                 <span x-text="category.name"></span>
               </a>
@@ -107,6 +109,7 @@
 
             <template x-for="item in category.items" :key="item.name">
               <div
+                x-show="!item.hidden"
                 class="py-4 border-b border-neutral-200 last:border-b-0"
                 :class="item.available === false ? 'opacity-50' : ''"
               >
@@ -119,6 +122,12 @@
                             : 'text-neutral-900'"
                     >
                       <span x-text="item.name"></span>
+                      <template x-if="item.qtd">
+                        <span
+                          class="text-xs text-neutral-500 font-normal"
+                          x-text="'(' + item.qtd + ' Unidades)'"
+                        ></span>
+                      </template>
 
                       <template x-if="item.spicy">
                         <span class="text-sm" title="Spicy">🌶️</span>
@@ -151,7 +160,7 @@
       </div>
 
       <footer class="p-10 text-center text-xs text-neutral-400">
-        Prices include VAT • Ask staff for allergens
+        Os preços incluem o IVA à taxa legal em vigor.
       </footer>
     </main>
   </body>

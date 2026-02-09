@@ -7,6 +7,17 @@ This README focuses on **process and trade-offs**, not implementation details.
 
 ---
 
+## Quick Reference
+
+**Updating Menu:** Edit `menu.json` → Commit → Push (live in ~1 minute)  
+**Hide item:** Add `"hidden": true`  
+**Mark unavailable:** Add `"available": false`  
+**Show quantity:** Add `"qtd": 6`
+
+See [Data Schema](#data-schema) below for full details.
+
+---
+
 ## Problem Statement
 
 Restaurants need a digital menu that:
@@ -127,21 +138,59 @@ This matches the simplicity of the problem.
 **Decision:**  
 Menu items support optional flags such as:
 
-- `available`
-- `spicy`
-- `vegetarian`
+- `hidden` — hide items completely
+- `available` — mark as unavailable
+- `qtd` — display unit quantity
+- `spicy` — dietary indicator 🌶️
+- `vegetarian` — dietary indicator 🥦
 
 **Trade-off:**  
 No filtering or advanced logic.
 
 **Rationale:**
 
-- Availability is a real operational need
+- Supports real operational needs (86-ing items, seasonal menus)
 - Flags are optional and declarative
-- UI reflects state without hiding items
-- One-word changes in JSON control behavior
+- UI reflects state without hiding items (except `hidden`)
+- One-line changes in JSON control behavior
 
 This avoids overengineering while supporting real workflows.
+
+---
+
+## Data Schema
+
+Menu items support the following fields:
+
+| Field         | Type    | Required | Description                           | Example                      |
+| ------------- | ------- | -------- | ------------------------------------- | ---------------------------- |
+| `name`        | string  | ✓        | Item name                             | `"Francesinha"`              |
+| `price`       | string  | ✓        | Price with decimals                   | `"12.50"`                    |
+| `description` | string  |          | Item description                      | `"Bife de vaca, fiambre..."` |
+| `qtd`         | number  |          | Unit quantity (displays "X Unidades") | `6`                          |
+| `hidden`      | boolean |          | Hides item from menu                  | `true`                       |
+| `available`   | boolean |          | Marks as unavailable (strikethrough)  | `false`                      |
+| `spicy`       | boolean |          | Shows 🌶️ icon                         | `true`                       |
+| `vegetarian`  | boolean |          | Shows 🥦 icon                         | `true`                       |
+
+### Example Item
+
+```json
+{
+  "name": "Asinhas de Frango",
+  "description": "Chicken wings",
+  "price": "4.50",
+  "qtd": 6,
+  "spicy": true
+}
+```
+
+### Operational Notes
+
+- **No `hidden` field** = item is visible (default behavior)
+- **`hidden: true`** = completely hidden (seasonal items, testing)
+- **`available: false`** = visible but marked unavailable (temporary 86)
+- **`qtd`** = only use for items sold in countable units
 
 ---
 
@@ -186,3 +235,44 @@ Importantly, it is **finished**.
 
 This project is not meant to impress through complexity.  
 It is meant to show **judgment**.
+
+---
+
+## Technical Reference
+
+### Stack
+
+- HTML5 + Tailwind CSS (CDN)
+- Alpine.js (CDN)
+- IntersectionObserver API (scroll tracking)
+- GitHub Pages (hosting)
+
+Total JavaScript: ~60 lines  
+Build process: None  
+Dependencies: 2 CDN scripts  
+Cost: €0/month
+
+### File Structure
+
+```
+/
+├── index.html        # Main page (don't edit)
+├── menu.js          # Alpine component (don't edit)
+├── menu.json        # Menu data (EDIT THIS)
+├── README.md
+└── assets/
+    └── logo.png     # Restaurant logo
+```
+
+### Deployment
+
+Changes pushed to `main` branch go live automatically via GitHub Pages.  
+Cache invalidation: ~60 seconds.
+
+### Browser Support
+
+- iOS Safari 12+
+- Android Chrome 80+
+- All modern desktop browsers
+
+Works offline after first load (cached assets).

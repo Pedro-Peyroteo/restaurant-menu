@@ -1,144 +1,274 @@
 {
   "categories": [
     {
-      "id": "burgers",
-      "name": "Burgers",
+      "id": "petiscos",
+      "name": "Petiscos",
       "items": [
         {
-          "name": "Classic Burger",
-          "description": "Beef patty, cheese, lettuce, tomato",
-          "price": "8.50",
-          "available": true
+          "name": "Argolas de Calamares",
+          "price": "4.00",
+          "qtd": 8
+        },
+        { "name": "Bolinhas de Alheira", "price": "4.50", "qtd": 6 },
+        {
+          "name": "Batata da Porta",
+          "description": "Batata frita, queijo, bacon, ovo e molho de francesinha",
+          "price": "6.50"
         },
         {
-          "name": "Chicken Burger",
-          "description": "Crispy chicken, mayo, pickles",
-          "price": "7.90",
-          "available": true
+          "name": "Batata Cheddar",
+          "description": "Batata frita, bacon, cebola frita e creme de queijo cheddar",
+          "price": "6.00"
         },
         {
-          "name": "Double Cheeseburger",
-          "description": "Two beef patties, double cheese, onion",
-          "price": "10.50",
-          "available": false
+          "name": "Fingers de Mozzarella",
+          "description": "Palitos de queijo mozzarella panados",
+          "qtd": 6,
+          "price": "4.00"
         },
+        { "name": "Rissol Leitão Grande", "price": "1.90" },
+        { "name": "Bolo de Bacalhau Grande", "price": "1.50" },
+        { "name": "Chamuça", "price": "1.30" },
         {
-          "name": "Bacon Burger",
-          "description": "Beef patty, bacon, cheddar, BBQ sauce",
-          "price": "9.80",
-          "available": true
+          "name": "Ovos Rotos",
+          "description": "Batata frita, queijo, cebola frita, presunto e ovo frito",
+          "price": "5.00"
         },
+        { "name": "Asinhas de Frango", "price": "4.50", "qtd": 6 },
         {
-          "name": "Veggie Burger",
-          "description": "Grilled vegetable patty, lettuce, tomato",
-          "price": "8.20",
-          "available": true,
-          "vegetarian": true
-        },
-        {
-          "name": "Spicy Burger",
-          "description": "Beef patty, jalapeños, spicy mayo",
-          "price": "9.20",
-          "available": false,
-          "spicy": true
-        }
-      ]
-    },
-    {
-      "id": "sides",
-      "name": "Sides",
-      "items": [
-        {
-          "name": "French Fries",
-          "description": "Golden and crispy",
-          "price": "2.50",
-          "available": true,
-          "vegetarian": true
-        },
-        {
-          "name": "Sweet Potato Fries",
-          "description": "Served with house sauce",
-          "price": "3.50",
-          "available": true,
-          "vegetarian": true
-        },
-        {
-          "name": "Onion Rings",
-          "description": "Crispy battered onion rings",
-          "price": "3.00",
-          "available": false,
-          "vegetarian": true
-        },
-        {
-          "name": "Side Salad",
-          "description": "Mixed greens with vinaigrette",
-          "price": "2.80",
-          "available": true,
-          "vegetarian": true
-        }
-      ]
-    },
-    {
-      "id": "drinks",
-      "name": "Drinks",
-      "items": [
-        {
-          "name": "Water",
-          "description": "Still or sparkling",
-          "price": "1.20",
-          "available": true
-        },
-        {
-          "name": "Soft Drink",
-          "description": "Cola, Orange, Lemon",
-          "price": "1.80",
-          "available": true
-        },
-        {
-          "name": "Iced Tea",
-          "description": "Homemade lemon iced tea",
+          "name": "Batata Frita",
           "price": "2.00",
-          "available": true
-        },
-        {
-          "name": "Beer",
-          "description": "Local draft beer",
-          "price": "2.50",
-          "available": false
-        },
-        {
-          "name": "House Wine",
-          "description": "Red or white",
-          "price": "2.80",
-          "available": true
+          "vegetarian": true
         }
       ]
     },
+
     {
-      "id": "desserts",
-      "name": "Desserts",
+      "id": "menu",
+      "name": "Menu",
       "items": [
         {
-          "name": "Chocolate Cake",
-          "description": "Rich chocolate cake with ganache",
-          "price": "3.50",
-          "available": true,
+          "name": "Francesinha",
+          "description": "Bife de vaca, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "price": "12.50"
+        },
+        {
+          "name": "Francesinha de Frango",
+          "description": "Hambúrguer de frango crocante, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "price": "11.50"
+        },
+        {
+          "name": "Francesinha de Alheira",
+          "description": "Alheira, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "price": "11.50"
+        },
+        {
+          "name": "Francesinha de Hambúrguer",
+          "description": "Hambúrguer, fiambre, queijo, linguiça, salsicha fresca, molho, ovo e batata frita",
+          "hidden": true,
+          "price": "14.00"
+        },
+        {
+          "name": "Tuguinha",
+          "description": "Pão rústico, linguiça, chouriça, queijo, presunto, fiambre, molho e batata frita",
+          "price": "14.00"
+        },
+        {
+          "name": "Cachorro",
+          "description": "Pão, fiambre, queijo, salsicha fumada, batata palha, ketchup, maionese e mostarda",
+          "price": "4.80"
+        },
+        {
+          "name": "Cachorro Molhado",
+          "description": "Pão, fiambre, queijo, presunto, cebola crocante, salsicha fumada, molho, ovo e batata frita",
+          "price": "9.50"
+        },
+        {
+          "name": "Hambúrguer Queijo Creme",
+          "description": "Carne de vaca, queijo creme, cebola, bacon e alface",
+          "price": "6.50"
+        },
+        {
+          "name": "Hamburgão Queijo Creme",
+          "description": "Dois hambúrgueres, queijo creme, cebola, bacon e alface",
+          "price": "8.50"
+        },
+        {
+          "name": "Hambúrguer de Frango",
+          "description": "Frango crocante, molho rosé, tomate, cheddar e alface",
+          "price": "6.50"
+        },
+        {
+          "name": "Hambúrguer 25",
+          "description": "Carne de vaca, queijo flamengo, cheddar, fiambre, bacon, salsicha fumada, ovo, maionese d’alho, tomate, alface e cebola crocante",
+          "price": "8.00"
+        },
+        {
+          "name": "Hambúrguer Sem Nome",
+          "description": "Carne de vaca, salsicha fumada, maionese, sweet chili, queijo flamengo, cebola, alface e batata palha",
+          "price": "7.00"
+        },
+        {
+          "name": "Hambúrguer de Alheira",
+          "description": "Alheira frita, maionese de alho, queijo flamengo, ovo, alface e tomate",
+          "price": "7.00"
+        },
+        {
+          "name": "Hambúrguer El Cabrón",
+          "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante e Doritos Chili",
+          "price": "9.00",
+          "spicy": true
+        },
+        {
+          "name": "Hambúrguer El Diablo",
+          "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante, ketchup picante, Doritos Chili e milho (mais picante)",
+          "price": "9.50",
+          "spicy": true
+        },
+        {
+          "name": "Hambúrguer O Farrusco",
+          "description": "Pão preto, molho barbecue, carne de vaca, ovo, queijo flamengo, cheddar, bacon, cebola crocante e alface",
+          "price": "8.00"
+        }
+      ]
+    },
+
+    {
+      "id": "vegetariano",
+      "name": "Vegetariano",
+      "items": [
+        {
+          "name": "Francesinha Vegetariana",
+          "description": "Pão de forma, alheira vegetariana, queijo, ovo e batata frita",
+          "price": "11.50",
           "vegetarian": true
         },
         {
-          "name": "Cheesecake",
-          "description": "Classic baked cheesecake",
-          "price": "3.80",
-          "available": false,
+          "name": "Hambúrguer Vegetariano",
+          "description": "Hambúrguer de legumes, queijo creme, cebola, tomate e alface",
+          "price": "6.50",
           "vegetarian": true
         },
         {
-          "name": "Ice Cream",
-          "description": "Vanilla, chocolate, or strawberry",
-          "price": "2.50",
-          "available": true,
+          "name": "Hambúrguer de Alheira Vegetariana",
+          "description": "Alheira vegetariana, maionese, tomate, queijo flamengo e alface",
+          "price": "7.00",
+          "vegetarian": true
+        },
+        {
+          "name": "Hambúrguer Vegetariano no Prato",
+          "description": "Alheira vegetariana, batata frita e alface",
+          "price": "6.50",
+          "vegetarian": true
+        },
+        {
+          "name": "Alheira Vegetariana no Prato",
+          "description": "Batata frita e alface",
+          "price": "7.00",
+          "vegetarian": true
+        },
+        {
+          "name": "Batata da Porta Vegetariana",
+          "description": "Batata frita, queijo, alheira vegetariana, ovo e molho",
+          "price": "6.00",
           "vegetarian": true
         }
+      ]
+    },
+
+    {
+      "id": "cervejas",
+      "name": "Cervejas",
+      "items": [
+        { "name": "Lambreta", "price": "0.90" },
+        { "name": "Fino Mahou 20 cl", "price": "1.20" },
+        { "name": "Príncipe Mahou 33 cl", "price": "1.90" },
+        { "name": "Caneca Mahou 50 cl", "price": "2.50" },
+        { "name": "Sangria à Pressão Mahou 20 cl", "price": "1.50" },
+        { "name": "Sangria à Pressão Mahou 33 cl", "price": "2.00" },
+        { "name": "Sangria à Pressão Mahou 50 cl", "price": "2.50" },
+        { "name": "Cerveja com Martini 20 cl", "price": "1.90" },
+        { "name": "Cerveja com Favaios 20 cl", "price": "1.80" },
+        { "name": "Panaché 20 cl", "price": "1.20" },
+        { "name": "Tango 20 cl", "price": "1.20" },
+        { "name": "Mahou Preta 0,33 cl", "price": "1.50" }
+      ]
+    },
+
+    {
+      "id": "cafes",
+      "name": "Cafés",
+      "items": [
+        { "name": "Café Expresso", "price": "0.90" },
+        { "name": "Descafeinado", "price": "0.90" },
+        { "name": "Café Duplo", "price": "1.80" },
+        { "name": "Carioca de Café", "price": "0.70" },
+        { "name": "Meia de Leite", "price": "1.20" },
+        { "name": "Galão", "price": "1.30" },
+        { "name": "Abatanado", "price": "1.20" },
+        { "name": "Pingo / Garoto", "price": "0.70" },
+        { "name": "Cevada", "price": "0.65" },
+        { "name": "Carioca de Limão", "price": "0.65" },
+        { "name": "Copo de Leite", "price": "0.85" },
+        { "name": "Cappuccino", "price": "1.00" },
+        { "name": "Chocolate Quente", "price": "1.50" },
+        { "name": "Chá", "price": "1.00" }
+      ]
+    },
+
+    {
+      "id": "vinhos",
+      "name": "Vinhos",
+      "items": [
+        { "name": "Vinho ao Copo (Tinto ou Branco)", "price": "1.20" },
+        { "name": "Vinho Verde Vermelhisco", "price": "4.90" },
+        { "name": "Vinho Tinto Arcos do Convento", "price": "4.90" },
+        { "name": "Vinho Branco Borba", "price": "5.90" },
+        { "name": "Vinho Alto do Pina (Tinto / Branco)", "price": "8.50" },
+        { "name": "Vinho Tinto São Brás Reserva", "price": "8.50" }
+      ]
+    },
+
+    {
+      "id": "espirituosas",
+      "name": "Bebidas Espirituosas",
+      "items": [
+        { "name": "Gin Tónico", "price": "6.00" },
+        { "name": "Martini", "price": "1.50" },
+        { "name": "Croft", "price": "2.00" },
+        { "name": "Limoncello", "price": "1.50" },
+        { "name": "Licor Beirão", "price": "3.00" },
+        { "name": "Baileys Cream", "price": "3.00" },
+        { "name": "Negrita Rum", "price": "3.00" },
+        { "name": "Macieira Cream", "price": "3.00" },
+        { "name": "Vinho do Porto 5 cl", "price": "1.30" },
+        { "name": "Licor de Café", "price": "2.00" },
+        { "name": "Whisky", "price": "4.00" },
+        { "name": "Rum 5 cl", "price": "4.00" },
+        { "name": "CR7 5 cl", "price": "4.00" },
+        { "name": "Cuba Libre", "price": "4.00" },
+        { "name": "Caipirinha", "price": "4.00" },
+        { "name": "Caipiblack", "price": "4.00" },
+        { "name": "Mojito", "price": "4.00" }
+      ]
+    },
+
+    {
+      "id": "cervejas-artesanais",
+      "name": "Cervejas Artesanais",
+      "items": [
+        { "name": "Lavradeira", "description": "Dubbel 7%", "price": "2.90" },
+        { "name": "Natália", "description": "Quadrupel 11%", "price": "3.30" },
+        { "name": "Varina", "description": "Stout 6.2%", "price": "2.90" },
+        { "name": "Ceifeira", "description": "Trigo 5.5%", "price": "2.90" },
+        {
+          "name": "Tricana",
+          "description": "Bohemian Pilsner 6%",
+          "price": "2.90"
+        },
+        { "name": "Salineira", "description": "IPA 6.2%", "price": "2.90" },
+        { "name": "Coelhinha", "description": "Abadia 9%", "price": "3.30" },
+        { "name": "Serrana", "description": "Fumada 6%", "price": "3.30" }
       ]
     }
   ]
