@@ -4,6 +4,7 @@ function menuData() {
     categories: [],
     loading: true,
     error: false,
+    activeCategory: null,
 
     // Tracks which section is currently "active" on screen.
     activeCategoryId: null,
