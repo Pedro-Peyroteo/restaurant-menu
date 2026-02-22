@@ -34,7 +34,7 @@
           "description": "Batata frita, queijo, cebola frita, presunto e ovo frito",
           "price": "5.00"
         },
-        { "name": "Asinhas de Frango", "price": "4.50", "qtd": 6 },
+        { "name": "Asinhas de Frango", "price": "4.50", "qtd": 6, "hidden": true },
         {
           "name": "Batata Frita",
           "price": "2.00",
