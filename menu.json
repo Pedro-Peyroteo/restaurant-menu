@@ -9,7 +9,16 @@
           "price": "4.00",
           "qtd": 8
         },
-        { "name": "Bolinhas de Alheira", "price": "4.50", "qtd": 6 },
+        {
+          "name": "Argolas de Frango",
+          "price": "4.50",
+          "qtd": 6
+        },
+        { 
+          "name": "Bolinhas de Alheira", 
+          "price": "4.50", 
+          "qtd": 6 
+        },
         {
           "name": "Batata da Porta",
           "description": "Batata frita, queijo, bacon, ovo e molho de francesinha",
@@ -124,6 +133,11 @@
           "description": "Carne de vaca, queijo flamengo, carne picada picante, molho de queijos picante, ketchup picante e Doritos Chili",
           "price": "9.00",
           "spicy": true
+        },
+        {
+           "name": "Hambúrguer Guacalito",
+           "description": "Frango crocante, queijo flamengo, tomate, maionese de alho, guacamole, alface",
+           "price": "8.00"
         },
         {
           "name": "Hambúrguer O Farrusco",
@@ -247,7 +261,7 @@
         { "name": "Licor de Café", "price": "2.00" },
         { "name": "Whisky", "price": "4.00" },
         { "name": "Rum 5 cl", "price": "4.00" },
-        { "name": "CR7 5 cl", "price": "4.00" },
+        { "name": "CRF 5 cl", "price": "4.00" },
         { "name": "Cuba Libre", "price": "4.00" },
         { "name": "Caipirinha", "price": "4.00" },
         { "name": "Caipiblack", "price": "4.00" },
