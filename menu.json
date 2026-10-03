@@ -148,6 +148,11 @@
           "name": "Hambúrguer O Farrusco",
           "description": "Pão preto, molho barbecue, carne de vaca, ovo, queijo flamengo, cheddar, bacon, cebola crocante e alface",
           "price": "8.00"
+        },
+        {
+          "name": "Hambúrguer O Burguês",
+          "description": "Carne de vaca, maionese de alho, queijo flamengo, chourição picante, ovo e molho de francesinha",
+          "price": "9.50"
         }
       ]
     },
