@@ -52,7 +52,8 @@
         {
           "name": "Tortilhas com Guacamole",
           "price": "4.50",
-          "vegetarian": true
+          "vegetarian": true,
+          "hidden": true
         }
       ]
     },
@@ -142,7 +143,8 @@
         {
            "name": "Hambúrguer Guacalito",
            "description": "Frango crocante, queijo flamengo, tomate, maionese de alho, guacamole, alface",
-           "price": "8.00"
+           "price": "8.00",
+           "hidden": true
         },
         {
           "name": "Hambúrguer O Farrusco",
